@@ -53,3 +53,41 @@ def buscar(filas, termino):
                 encontradas.append(fila)
                 break  # ya coincidio, no repetir la fila
     return encontradas
+
+
+def opcion_buscar(encabezados, filas):
+    termino = input("Termino a buscar (equipo, anio, etc.): ")
+    if termino.strip() == "":
+        print("Escribe algo para buscar.")
+        return
+    encontradas = buscar(filas, termino)
+    if len(encontradas) > 0:
+        imprimir_tabla(encabezados, encontradas)
+    print("Se encontraron " + str(len(encontradas)) + " registros.")
+
+
+def mostrar_menu():
+    print()
+    print("=== DataLab - Mundiales de la FIFA ===")
+    print("1. Buscar")
+    print("5. Salir")
+
+
+def main():
+    encabezados, filas = cargar_dataset("fifa_pequeno.csv")
+    print("Dataset cargado: fifa_pequeno.csv (" + str(len(filas)) + " registros)")
+
+    while True:
+        mostrar_menu()
+        opcion = input("Elige una opcion: ").strip()
+        if opcion == "1":
+            opcion_buscar(encabezados, filas)
+        elif opcion == "5":
+            print("Hasta luego.")
+            break
+        else:
+            print("Opcion no valida, intenta de nuevo.")
+
+
+
+main()

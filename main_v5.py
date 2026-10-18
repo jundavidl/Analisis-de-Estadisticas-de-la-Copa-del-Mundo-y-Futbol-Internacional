@@ -1,8 +1,3 @@
-"""
-Version 5: opcion opcional Filtrar por condicion.
-Dataset: Mundiales de la FIFA (1930-2022).
-"""
-
 
 def cargar_dataset(ruta):
     """Lee el CSV con open() y split(). Devuelve (encabezados, filas).

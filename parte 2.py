@@ -42,4 +42,26 @@ def imprimir_tabla(encabezados, filas):
         print(linea)
 
 
+def mostrar_menu():
+    print()
+    print("=== DataLab - Mundiales de la FIFA ===")
+    print("5. Salir")
 
+
+def main():
+    encabezados, filas = cargar_dataset("fifa_pequeno.csv")
+    print("Dataset cargado: fifa_pequeno.csv (" + str(len(filas)) + " registros)")
+    imprimir_tabla(encabezados, filas[:10])
+
+    while True:
+        mostrar_menu()
+        opcion = input("Elige una opcion: ").strip()
+        if opcion == "5":
+            print("Hasta luego.")
+            break
+        else:
+            print("Opcion no valida, intenta de nuevo.")
+
+
+
+main()

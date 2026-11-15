@@ -107,8 +107,7 @@ def a_filas(datos):
 
 
 def limpiar_nombre(nombre, formato):
-    """Deja el nombre de archivo seguro: sin extension repetida y solo con
-    letras, numeros, guion y guion bajo."""
+   
     nombre = nombre.strip()
     if nombre.lower().endswith("." + formato):
         nombre = nombre[:-(len(formato) + 1)]
@@ -124,8 +123,7 @@ def limpiar_nombre(nombre, formato):
 
 
 def guardar_resultado(nombre, formato, datos):
-    """Guarda `datos` en resultados/<nombre>.<formato> (csv o json).
-    Si el archivo ya existe, se reemplaza. Devuelve la ruta escrita."""
+    
     if not os.path.exists(CARPETA_RESULTADOS):
         os.makedirs(CARPETA_RESULTADOS)
     nombre = limpiar_nombre(nombre, formato)

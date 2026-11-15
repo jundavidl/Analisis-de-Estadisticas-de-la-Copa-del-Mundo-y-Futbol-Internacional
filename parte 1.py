@@ -1,12 +1,9 @@
 
 
-# Campos numericos que no tiene sentido promediar
 CAMPOS_SIN_PROMEDIO = ["Year"]
 
 
-# ----------------------------------------------------------------------
-# Tipos de campos
-# ----------------------------------------------------------------------
+
 
 def campos_numericos(registros):
     
@@ -40,9 +37,6 @@ def valores_unicos(registros, campo):
     return unicos
 
 
-# ----------------------------------------------------------------------
-# Busqueda y filtros
-# ----------------------------------------------------------------------
 
 def buscar(registros, termino):
 
@@ -75,9 +69,6 @@ def filtrar_igual(registros, campo, valor):
     return resultado
 
 
-# ----------------------------------------------------------------------
-# Estadisticas
-# ----------------------------------------------------------------------
 
 def calcular_estadisticas(registros, campo):
 
@@ -139,9 +130,7 @@ def comparar_grupos(registros, campo, valor_a, valor_b):
     return comparacion
 
 
-# ----------------------------------------------------------------------
-# Resumen del dataset
-# ----------------------------------------------------------------------
+
 
 def generar_resumen(registros):
 

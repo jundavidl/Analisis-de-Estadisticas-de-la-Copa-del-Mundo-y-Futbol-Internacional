@@ -20,7 +20,7 @@ def campos_numericos(registros):
 
 
 def campos_texto(registros):
-    """Lista de campos que no son numericos."""
+    
     numericos = campos_numericos(registros)
     textos = []
     for campo in registros[0]:
